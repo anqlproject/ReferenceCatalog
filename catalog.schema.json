@@ -1,0 +1,66 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/anqlproject/ReferenceCatalog/main/catalog.schema.json",
+  "title": "ReferenceCatalog",
+  "description": "Central catalog of reference libraries available to ANQL.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "catalogVersion",
+    "repositories"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "const": 1,
+      "description": "Schema version used by this catalog."
+    },
+    "catalogVersion": {
+      "type": "string",
+      "pattern": "^(0|[1-9][0-9]*)\\.(0|[1-9][0-9]*)\\.(0|[1-9][0-9]*)$",
+      "description": "Catalog data version in MAJOR.MINOR.PATCH format."
+    },
+    "repositories": {
+      "type": "array",
+      "description": "Published reference libraries available to browse in ANQL.",
+      "items": {
+        "$ref": "#/$defs/repository"
+      }
+    }
+  },
+  "$defs": {
+    "repository": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "name",
+        "description",
+        "catalogUrl"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+          "description": "Stable identifier, unique in this catalog and independent of the display name."
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Library display name."
+        },
+        "description": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Brief description of the library."
+        },
+        "catalogUrl": {
+          "type": "string",
+          "format": "uri",
+          "pattern": "^https://",
+          "description": "HTTPS URL of this library's detailed catalog."
+        }
+      }
+    }
+  }
+}

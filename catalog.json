@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "catalogVersion": "0.1.0",
+  "repositories": [
+    {
+      "id": "science",
+      "name": "ScienceReference",
+      "description": "Scientific reference library for ANQL.",
+      "catalogUrl": "https://raw.githubusercontent.com/anqlproject/ScienceReference/main/catalog.json"
+    }
+  ]
+}
