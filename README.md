@@ -28,11 +28,13 @@ Publish the library catalog at a stable, public URL before proposing its entry
 here. Verify that the URL uses HTTPS and that the detailed catalog matches the
 declared identifier and name.
 
-The central catalog currently lists only `ScienceReference`. Its detailed
-catalog URL is reserved at
-`https://raw.githubusercontent.com/anqlproject/ScienceReference/main/catalog.json`.
-That file has not yet been published in the ScienceReference repository, so
-the URL will not be available until the repository adds it.
+The central catalog currently lists `ScienceReference` and `CodeReference`.
+Their detailed catalog URLs are reserved at
+`https://raw.githubusercontent.com/anqlproject/ScienceReference/main/catalog.json`
+and
+`https://raw.githubusercontent.com/anqlproject/CodeReference/main/catalog.json`.
+These files have not yet been published in their respective repositories, so
+the URLs will not be available until the repositories add them.
 
 ## Versioning and compatibility
 

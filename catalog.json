@@ -1,12 +1,18 @@
 {
   "schemaVersion": 1,
-  "catalogVersion": "0.1.0",
+  "catalogVersion": "0.1.1",
   "repositories": [
     {
       "id": "science",
       "name": "ScienceReference",
       "description": "Scientific reference library for ANQL.",
       "catalogUrl": "https://raw.githubusercontent.com/anqlproject/ScienceReference/main/catalog.json"
+    },
+    {
+      "id": "codereference",
+      "name": "CodeReference",
+      "description": "Reusable code snippets, practical examples, and programming references for ANQL.",
+      "catalogUrl": "https://raw.githubusercontent.com/anqlproject/CodeReference/main/catalog.json"
     }
   ]
 }
